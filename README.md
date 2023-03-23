@@ -1,2 +1,2 @@
 # Machine-learning-for-Hubbard-Model
-Solve self-consistent equations by ml
+Learn Hubbard Model with Machine Learning
