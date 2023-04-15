@@ -1,2 +1,2 @@
-# Machine-learning-for-Hubbard-Model
-Learn Hubbard Model with Machine Learning
+# Machine-learning-for-Model-Hamiltonian
+
