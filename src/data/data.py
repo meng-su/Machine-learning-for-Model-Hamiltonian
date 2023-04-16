@@ -22,7 +22,7 @@ import multiprocessing
 
 if __name__ == "__main__":
     # Define the number of tasks
-    num_of_data = 5
+    num_of_data = 10000
 
     lat_size = 8
     Jij = 1.0
