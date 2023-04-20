@@ -16,6 +16,7 @@ keras >= 2.6.0
 
 scikit-learn >= 1.2.2
 
+pandas >= 1.5.3
 
 If you want to train dataset and get the accuracy of model in testing set, just:
 
