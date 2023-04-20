@@ -61,32 +61,27 @@ x, xt, y, yt = tts(XX,YY)
 print(y)
 print(x[0].shape)
 
-while True:
-    model = cnn.build_model(x[0])
-    model.summary()
+model = cnn.build_model(x[0])
+model.summary()
 
-    fitting = model.fit(x ,y , epochs=500, batch_size=50 ,validation_split=0.1)
+fitting = model.fit(x ,y , epochs=500, batch_size=50 ,validation_split=0.1)
 
-    score = model.evaluate(xt, yt, verbose = 1)
+score = model.evaluate(xt, yt, verbose = 1)
 
-    y_pre = model.predict(xt)
+y_pre = model.predict(xt)
 
 
-    y_pre.tolist()
-    # y_pre = np.round(np.array(y_pre))
-    index = 0
-    for i in range(len(y_pre)):
-        if abs(yt[i] - y_pre[i]) < 0.05:
-            index += 1
-    acc = index/len(y_pre)
-    print("accurate = " + str(acc))
+y_pre.tolist()
+index = 0
+for i in range(len(y_pre)):
+if abs(yt[i] - y_pre[i]) < 0.05:
+    index += 1
+acc = index/len(y_pre)
+print("accurate = " + str(acc))
 
-    model.save('saved_model_CNN/my_model_1')
+model.save('saved_model_CNN/my_model_1')
 
-    print("score = " + str(score))
-
-    if acc >= 0.85:
-        break
+print("score = " + str(score))
 
 # print(score)
 import matplotlib.pyplot as plt
